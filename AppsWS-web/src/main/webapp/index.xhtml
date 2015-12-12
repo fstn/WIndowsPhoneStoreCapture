@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/default.xhtml">
+   <ui:define name="content">
+    
+      <h:form id="reg">
+         <h2>Fill Database</h2>
+               <h:commandButton id="fillDB" action="#{marketAppController.fillDatabase}" value="Fill DB" styleClass="register"/>
+               <h:messages styleClass="messages" errorClass="invalid" infoClass="valid" warnClass="warning"
+                           globalOnly="true"/>
+           
+       
+               <h:commandButton id="getCategories" action="#{marketCatController.getCats}" value="Get Categories" styleClass="register"/>
+               <h:messages styleClass="messages" errorClass="invalid" infoClass="valid" warnClass="warning"
+                           globalOnly="true"/>
+      </h:form>
+     
+   </ui:define>
+</ui:composition>
